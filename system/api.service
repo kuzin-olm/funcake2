@@ -1,0 +1,14 @@
+[Unit]
+Description=cake api
+After=network.target
+
+[Service]
+User=user
+Group=www-data
+WorkingDirectory=/path/to/funcake/backend
+Environment="PATH=/path/to/funcake/backend/.venv/bin"
+ExecStart=/path/to/funcake/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 5050
+
+[Install]
+WantedBy=multi-user.target
+
