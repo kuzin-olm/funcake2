@@ -14,7 +14,7 @@ from app.api_v1.crud.ingredient import get_all_ingredients, get_ingredient_by_id
 router = APIRouter(
     prefix="/ingredient",
     tags=["ingredient"],
-    # dependencies=[Depends(verify_auth)],
+    dependencies=[Depends(verify_auth)],
 )
 
 
