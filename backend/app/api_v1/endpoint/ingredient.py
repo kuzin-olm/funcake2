@@ -8,13 +8,13 @@ from sqlalchemy.orm import Session
 from app.db.connector import get_db
 from app.api_v1.dependencies import verify_auth
 from app.api_v1.schema.ingredient import Ingredient, IngredientCreate, IngredientUpdate
-from app.api_v1.crud.Ingredient import get_all_ingredients, get_ingredient_by_id, add_ingredient, del_ingredient, \
+from app.api_v1.crud.ingredient import get_all_ingredients, get_ingredient_by_id, add_ingredient, del_ingredient, \
     upd_ingredient
 
 router = APIRouter(
     prefix="/ingredient",
     tags=["ingredient"],
-    dependencies=[Depends(verify_auth)],
+    # dependencies=[Depends(verify_auth)],
 )
 
 
